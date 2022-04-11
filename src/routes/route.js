@@ -63,8 +63,8 @@ router.post('/test-post2', function (req, res) {
 
 const randomController= require("../controllers/randomController.js")
 //write a post request to accept an element in post request body and add it to the given array and return the new array
-router.post('/test-post3', randomController.addToArray ); //HANDLER/CONTROLLER
+router.post('/get/playerslist', randomController.addPlayers ); //HANDLER/CONTROLLER
 
-
+router.post('/get/newPlayerslist', randomController.newPlayers);
 
 module.exports = router;
