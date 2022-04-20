@@ -20,7 +20,16 @@ const mid4= function ( req, res, next) {
     next()
 }
 
+
+ const dateUrl = function (req, res, next) {
+    let ip = req.ip
+    let date = new Date()
+    let url = req.url
+    console.log(date + "  " + ip + "  " + url);
+    next();
+}
 module.exports.mid1= mid1
 module.exports.mid2= mid2
 module.exports.mid3= mid3
 module.exports.mid4= mid4
+module.exports.dateUrl= dateUrl
